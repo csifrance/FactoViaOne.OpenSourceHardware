@@ -1,5 +1,11 @@
 **Assemble your own ADVANTECH ARK-1124 : PART 1 - add SSD **
 
+BILL OF MATERIAL : search for ADVANTECH ARK-1124U
+For example : 
+https://www.advantech.com/products/1-2jkbyz/ark-1124u/mod_e4faa6eb-0cd1-4c55-b2d9-0dea6c8cbdff
+
+In the case below, if you are an advanced user, we are detailing the assembly for your own specification (else you could buy it off the shelf with everything already mounted).
+
 * ensure you are wired to Ground of the ARK-1124
 you have many versions of bracelets, for example an traditional green one, 
 
