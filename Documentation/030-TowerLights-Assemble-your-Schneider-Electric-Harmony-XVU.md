@@ -24,6 +24,6 @@
 more info in video : https://youtu.be/ZfthcWQhHGk
 
 SANITY CHECK : 
-* When no blinking : 21.5 mA ; when blinking : 12 mA
+* When blinking versus no blinking, we have the current intensity consumption of 21.5 mA versus 12 mA (the images below could lead to error, because we have a lag between the multi-meter that mesures the data and displays it, the actual blink and the remanescence effect of the light, and the time the camara takes a picture !)
 * ![image.png](./Images/030000image-cec50dde-d3d4-49dd-a9dd-e1d4433a8f65.png)
 * ![image.png](./Images/030000image-9812da76-f076-4eca-bffa-fc1e5dc55737.png)
