@@ -6,10 +6,12 @@ https://www.brainboxes.com/news/introducing-the-bb-400-neuron-edge-controller
 
 
 **POWER**
-The recommanded Power Supply is this one : 
+The recommanded Power Supply is this one (PW-400 : OUTPUT: 12V DC 1.5A) : 
 https://www.brainboxes.com/product/accessories/power-supplies/pw-400
+
+
 However, depending on the Use Case that we want to implement in FactoVia One, we will be needing either 29V DC, 25V DC, 19V DC, 12V DC ou 5V DC.
-In this example, we are going to use a 19V DC 3.16A which could be dangerous for the BB-400, if we don't take care of what we are plugging on the BB-400 as output devices. 
+In this example, we are going to use a 19V DC 3.16A which could be dangerous for the BB-400, that can cope with 15 W Maximum. Else you could grill your BB-400, if we don't take care of what we are plugging on the BB-400 as output devices. 
 
 **Properties** Power Input : +5V to +30V DC 15W Max
 
