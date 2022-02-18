@@ -1,6 +1,6 @@
 **How to mount power, Install and Configure a BB-400**
 
-![image.png](./Images/040010image-BB400Overview.png)
+![image.png](./Resource-Images/040010image-BB400Overview.png)
 
 https://www.brainboxes.com/news/introducing-the-bb-400-neuron-edge-controller
 
