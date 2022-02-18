@@ -32,5 +32,6 @@ We have than Ampers usage for BB-400 + TowerLights + horn + fan ... that should 
 To be continued
 
 **CONFIGURE**
+For debug purpose, you could directly plug-in a RJ45 ethernet cable between the BB-400 (LAN and not UPLINK for this debug configuration) and ARK-1124 (either female front plug or rear).
 
 To be continued
