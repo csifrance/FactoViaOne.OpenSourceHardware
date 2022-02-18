@@ -34,4 +34,39 @@ To be continued
 **CONFIGURE**
 For debug purpose, you could directly plug-in a RJ45 ethernet cable between the BB-400 (LAN and not UPLINK for this debug configuration) and ARK-1124 (either female front plug or rear).
 
-To be continued
+Below, we are going to use the NETGEAR Switch : 
+- Plug in the RJ45 of ARK1124 to NETGEAR Switch (for instance entry "1")
+- Plug in the RJ45 of BB-400 (the entry "LAN") to NETGEAR Switch (for instance entry "2")
+
+Windows 10 is tricky to configure the IP Address of the ARK1124 and leads to the error "Can’t save IP settings. Check one or more settings and try again.".
+Let's use the old fashion way (see : https://www.thewindowsclub.com/cant-save-ip-settings-windows)
+
+You can follow the given steps to change IP Settings by Control Panel.
+
+Open Control Panel from the Start Menu.
+Make sure your “View by” is set to Large icons.
+Click Network and Sharing Center > Change adapter settings.
+Right-click on your Ethernet connection and select Properties.
+Select Internet Protocol Version 4 (TCP/IPv4) and click Properties.
+Now, select “Use the following IP address”, insert the IP address, Subnet Mask, Default Gateway, DNS Server, and click OK : 
+- IP address
+- Subnet Mask
+- Default Gateway
+- DNS Server
+
+Once we did that, Windows gives us the proper configudation of how to configure in Windows 10 way : 
+IP settings = Manual
+IP address = 192.168.127.3
+Subnet prefix lenght = 24 
+Prefered DNS = {leave it blank} 
+Alternate DNS = {leave it blank}
+
+Then Windows indicates : 
+IPv4 gateway = 192.168.127.1
+IPv4 DNS servers = 192.168.24.254 
+
+**SANITY CHECK**
+* go to the BB-400 management portal at the URL : https://bb400-XXXX:9090 (where XXXX is the last 4 digit of your MAC address)
+* Query the BB-400 REST API at the URL (not https): http://bb400-XXXX:9000/io 
+it should return the status of the LED in front of the BB-400
+
