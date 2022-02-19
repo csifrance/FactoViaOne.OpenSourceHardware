@@ -5,11 +5,19 @@ Many IoT Edge computing could do the job :
 * HPE EL300 that is a monster !
 * Arestech (another massive monster! as detailed below)
   * MEVA 3110 : https://www.arestech.com.tw/machine-vision-computer-meva-3110.html
+  * Supports 8th/9th Gen Intel® LGA 1151 Processors
+    Triple Display Supported by VGA, DVI and Display Port
+    2 x DDR4 2400 / 2666MHz SO-DIMM, Max up to 64GB
+    3 x Intel GbE Ports, Supporting Wake-on-LAN and PXE
+    4 x Removable 2.5“ SATA HDD bay and
+    2 x CFast / mSATA, Supporting RAID 0, 1, 5, 10
+    4 x Full-Size Mini-PCIe and 4 x SIM Sockets
+    9~48V DC Input with Built-in Ignition Power Control
+    -40°C ~ 70°C Wide Temperature Operation
 
-CPU : Intel(R) Core(TM) i7-9700TE CPU @ 1.80GHz 8 cores
-specifications : https://openbenchmarking.org/s/Intel%20Core%20i7-9700TE
-
-HDD : 3 x 2TB Samsung SSD 860 PRO 
+    * CPU : Intel(R) Core(TM) i7-9700TE CPU @ 1.80GHz 8 cores
+       * specifications : https://openbenchmarking.org/s/Intel%20Core%20i7-9700TE
+    * HDD : 3 x 2TB Samsung SSD 860 PRO 
 
 **Installing the OS**
 - Prepare a bootable USB
