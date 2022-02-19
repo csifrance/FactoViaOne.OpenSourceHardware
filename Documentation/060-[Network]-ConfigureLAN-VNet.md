@@ -16,7 +16,7 @@ IPv4 DNS servers = 192.168.24.254
 
 **IoT Edge - Linux Ubuntu**
 * First check current IP address and writ it down
-* go to [Top right menu > click on Wifi icon > Click on tool screw driver and wrenk > Network Settings > Network > click on wheel > Wired > Tab "IPv4" > Ethernet (eno1) > gear_icon > IPv4]
+* go to [Top right menu > click on Wifi icon > Click on tool screw driver and wrenk > Network Settings > Network > identify your network (for instance eno1) > click on the right hand-side the wheel icone > Wired > Tab "IPv4" > Ethernet (eno1) > gear_icon > IPv4]
   
 IPv4 Method = Manual (as opposed to DHCP)
 **address = 192.168.127.4**
@@ -33,4 +33,4 @@ Gateway = 192.168.127.1  (always in .1 and the other .2 .3 .4 etc...)
 * From Field Gateway : 
   * run ping 192.168.127.1  => time<1ms TTL=64
   * run ping 192.168.127.3  => time<1ms TTL=128
-  * 
+
