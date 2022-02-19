@@ -7,10 +7,11 @@ In order to follow a similar structure of tutorials, we are using the  instructi
   * [010]-[ARK1124]-Assemble-SSD-&-RAM.md
 
 **FIRST SECTION** : Properties of this documentation
-* **Difficulty** : Detail the difficulty for a non-expert person (not the expert that could do that in 5 minutes) 
+* **Difficulty** : 
+  * Detail the difficulty for a non-expert person (not the expert that could do that in 5 minutes) 
 
-* **Estimated time to perform** : Gives an estimated time to complete the opetations for a non-expert person (not the expert that could do that in 5 minutes)
-
+* **Estimated time to perform** : 
+  * Gives an estimated time to complete the opetations for a non-expert person (not the expert that could do that in 5 minutes)
 **SECOND SECTION**
 * Bill of material
 
