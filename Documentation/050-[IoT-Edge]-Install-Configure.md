@@ -4,6 +4,7 @@
 Many IoT Edge computing could do the job : 
 * HPE EL300 that is a monster !
 * Arestech (another massive monster! as detailed below)
+  * MEVA 3110 : https://www.arestech.com.tw/machine-vision-computer-meva-3110.html
 
 CPU : Intel(R) Core(TM) i7-9700TE CPU @ 1.80GHz 8 cores
 specifications : https://openbenchmarking.org/s/Intel%20Core%20i7-9700TE
