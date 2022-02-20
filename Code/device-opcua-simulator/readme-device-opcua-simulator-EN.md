@@ -18,9 +18,10 @@ And Node.js is an open source server environment.
 4. then run the 2 commands
 
 ```
-npm install
+npm install // better : npm ci so that we stay at the same version of dependences
 npm start
 ```
+![image.png](Resources-Images/010-img-installPackage.png)
 
 The project is started, you should see incoming informations in the console. Like this.
 
@@ -49,3 +50,6 @@ The first line is your OPC-UA server endpoint. You can use a custom OPC-UA clien
 
 You can modify the simulation in `app.ts` file.
 We let you enjoy to connect it to a Azure IoT Hub by example ! [https://docs.microsoft.com/en-us/azure/iot-hub/](https://docs.microsoft.com/en-us/azure/iot-hub/)
+
+
+![image.png](Resources-Images/020-img-RunningTheOPCUAServer.png)
