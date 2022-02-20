@@ -1,3 +1,4 @@
+import * as path from "path";
 import {
     OPCUAServer,
     OPCUACertificateManager,
@@ -5,7 +6,11 @@ import {
     SecurityPolicy,
     Namespace,
     UAObject,
-} from 'node-opcua';
+} from "node-opcua";
+
+import envPaths from "env-paths";
+const config = envPaths("Factovia-MiniFactory").config;
+const pkiFolder = path.join(config, "PKI-Server");
 
 class OpcServer {
     public server: OPCUAServer;
@@ -25,12 +30,14 @@ class OpcServer {
     sessionInit() {
         return new Promise<void>(async (resolve) => {
             this.server = new OPCUAServer({
+                serverCertificateManager: new OPCUACertificateManager({
+                    rootFolder: pkiFolder,
+                }),
                 port: this.port, // the port of the listening socket of the server
                 resourcePath: "/UA/SmartFactory",
-
                 allowAnonymous: true,
                 securityModes: [MessageSecurityMode.None],
-                securityPolicies: [SecurityPolicy.None]
+                securityPolicies: [SecurityPolicy.None],
             });
             await this.server.initialize();
 
@@ -39,12 +46,12 @@ class OpcServer {
 
             await this.server.start();
             console.log("Server is now listening ... (press CTRL+C to stop)");
-            const endpointUrl = this.server.endpoints[0].endpointDescriptions()[0].endpointUrl;
+            const endpointUrl =
+                this.server.endpoints[0].endpointDescriptions()[0].endpointUrl;
             this.hostname = endpointUrl;
             console.log(" the primary server endpoint url is ", endpointUrl);
             resolve();
         });
-
     }
 }
 export default OpcServer;
