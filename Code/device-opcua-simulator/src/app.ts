@@ -4,7 +4,7 @@ import {
   Variant,
   DataType,
   StatusCodes,
-  makeAccessLevelExFlag,
+  makeAccessLevelFlag,
   DataValue
 } from "node-opcua";
 
@@ -23,7 +23,7 @@ async function main() {
     componentOf: newDevice,
     browseName: "Random",
     dataType: "Double",
-    accessLevel: makeAccessLevelExFlag("CurrentRead")
+    accessLevel: makeAccessLevelFlag("CurrentRead")
   });
 
   setInterval(() => {
@@ -44,7 +44,7 @@ async function main() {
     componentOf: clientDevice,
     browseName: "ClientVar",
     dataType: "Double",
-    accessLevel: makeAccessLevelExFlag("CurrentRead | CurrentWrite")
+    accessLevel: makeAccessLevelFlag("CurrentRead | CurrentWrite")
   });
   clientVar.setValueFromSource({ dataType: DataType.Double, value: 1.1 });
 
@@ -53,7 +53,7 @@ async function main() {
     componentOf: clientDevice,
     browseName: "ConstantVar",
     dataType: "Double",
-    accessLevel: makeAccessLevelExFlag("CurrentRead")
+    accessLevel: makeAccessLevelFlag("CurrentRead")
   });
   constantVar.setValueFromSource({ dataType: DataType.Double, value: 10.0 });
 
