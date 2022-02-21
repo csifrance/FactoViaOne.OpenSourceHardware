@@ -1,89 +1,83 @@
-import OpcServer from './OPC/opcServer';
-import OpcClient from './OPC/opcClient';
-import { Variant, DataType, StatusCodes } from 'node-opcua';
+import OpcServer from "./OPC/opcServer";
+import OpcClient from "./OPC/opcClient";
+import {
+  Variant,
+  DataType,
+  StatusCodes,
+  makeAccessLevelExFlag,
+  DataValue,
+} from "node-opcua";
 
 async function main() {
   // *** SERVER PART ***
   const server = new OpcServer();
 
   await server.sessionInit();
-  let randomValueOfDevice1 = 1.0;
+
   const newDevice = server.namespace.addObject({
     organizedBy: server.server.engine.addressSpace.rootFolder.objects,
-    browseName: "Device1"
+    browseName: "Device1",
   });
 
-  server.namespace.addVariable({
+  const randomVar = server.namespace.addVariable({
     componentOf: newDevice,
-    browseName: "random",
+    browseName: "Random",
     dataType: "Double",
-    value: {
-      get: function () {
-        return new Variant({ dataType: DataType.Double, value: randomValueOfDevice1 });
-      }
-    }
+    accessLevel: makeAccessLevelExFlag("CurrentRead")
   });
 
   setInterval(() => {
     // Value is changed by server
-    randomValueOfDevice1 = Math.random() * 10;
+    const value = Math.random() * 10;
+    randomVar.setValueFromSource({ dataType: DataType.Double, value });
   }, 500);
 
   // *** CLIENT PART ***
 
   const clientDevice = server.namespace.addObject({
     organizedBy: server.server.engine.addressSpace.rootFolder.objects,
-    browseName: "clientDevice"
+    browseName: "ClientDevice",
   });
-
-  let clientVarValue = 1.1;
 
   // We'll modify this variable with our local opc client.
   const clientVar = server.namespace.addVariable({
     componentOf: clientDevice,
-    browseName: "clientVar",
+    browseName: "ClientVar",
     dataType: "Double",
-    value: {
-      get: function () {
-        return new Variant({ dataType: DataType.Double, value: clientVarValue });
-      },
-      set: function (variant: Variant) {
-        clientVarValue = variant.value;
-        return StatusCodes.Good;
-      }
-    }
+    accessLevel: makeAccessLevelExFlag("CurrentRead | CurrentWrite"),
   });
+  clientVar.setValueFromSource({ dataType: DataType.Double, value: 1.1 });
 
-  // Create a constante var for test modification with another client.
-  server.namespace.addVariable({
+  // Create a constant var for test modification with another client.
+  const constantVar = server.namespace.addVariable({
     componentOf: clientDevice,
-    browseName: "constantVar",
+    browseName: "ConstantVar",
     dataType: "Double",
-    value: {
-      get: function () {
-        return new Variant({ dataType: DataType.Double, value: 10.0 });
-      },
-      set: function () {
-        return StatusCodes.Good;
-      }
-    }
+    accessLevel: makeAccessLevelExFlag("CurrentRead"),
   });
+  constantVar.setValueFromSource({ dataType: DataType.Double, value: 10.0 });
 
   const client = new OpcClient();
   await client.connectClient(server.hostname);
 
-  const nodeMonitor = await client.getNodeMonitor(clientVar.nodeId.displayText());
-  nodeMonitor.on("changed", (dataval) => {
-    console.log("Value changed by client ! ", dataval.value.value);
+  const nodeMonitor = await client.createMonitoredItem(clientVar.nodeId);
+  nodeMonitor.on("changed", (dataValue: DataValue) => {
+    console.log("Value changed by client ! ", dataValue.value.value);
   });
-
 
   setInterval(async () => {
     // Value is changed by the client
-    await client.modifyNode(clientVar.nodeId.toString(), Math.random() * 10)
-
-  }, 1000)
-
+    const statusCode = await client.modifyNode(
+      clientVar.nodeId.toString(),
+      Math.random() * 10
+    );
+    if (statusCode !== StatusCodes.Good) {
+      console.log(
+        "modify node failed with statusCode =",
+        statusCode.toString()
+      );
+    }
+  }, 1000);
 }
 
-main()
+main();
