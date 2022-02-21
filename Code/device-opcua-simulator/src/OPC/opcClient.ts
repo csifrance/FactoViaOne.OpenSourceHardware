@@ -13,7 +13,7 @@ import {
     DataType,
     Variant,
     NodeIdLike,
-    OPCUACertificateManager,
+    OPCUACertificateManager
 } from "node-opcua";
 import envPaths from "env-paths";
 
@@ -29,16 +29,16 @@ class OpcClient {
 
         const connectOptions: OPCUAClientOptions = {
             clientCertificateManager: new OPCUACertificateManager({
-                rootFolder: pkiFolder,
+                rootFolder: pkiFolder
             }),
             applicationName: "SmartFactory",
             connectionStrategy: {
                 initialDelay: 10,
-                maxRetry: 15,
+                maxRetry: 15
             },
             securityMode: MessageSecurityMode.None,
             securityPolicy: SecurityPolicy.None,
-            endpointMustExist: false,
+            endpointMustExist: false
         };
 
         this.client = OPCUAClient.create(connectOptions);
@@ -67,7 +67,7 @@ class OpcClient {
                 requestedMaxKeepAliveCount: 5,
                 maxNotificationsPerPublish: 10,
                 publishingEnabled: true,
-                priority: 1,
+                priority: 1
             });
 
             this.subscription
@@ -90,16 +90,18 @@ class OpcClient {
      * Return a monitor object for a given nodeId
      * @param nodeId The id of the node you want to monitor @example "ns=1;i=1001"
      */
-    async createMonitoredItem(nodeId: NodeIdLike): Promise<ClientMonitoredItemBase> {
+    async createMonitoredItem(
+        nodeId: NodeIdLike
+    ): Promise<ClientMonitoredItemBase> {
         return this.subscription.monitor(
             {
                 nodeId: resolveNodeId(nodeId),
-                attributeId: AttributeIds.Value,
+                attributeId: AttributeIds.Value
             },
             {
                 samplingInterval: 250,
                 discardOldest: true,
-                queueSize: 1,
+                queueSize: 1
             },
             TimestampsToReturn.Both
         );
@@ -112,9 +114,9 @@ class OpcClient {
             value: {
                 value: new Variant({
                     value,
-                    dataType: DataType.Double,
-                }),
-            },
+                    dataType: DataType.Double
+                })
+            }
         });
     }
 }

@@ -5,7 +5,7 @@ import {
   DataType,
   StatusCodes,
   makeAccessLevelExFlag,
-  DataValue,
+  DataValue
 } from "node-opcua";
 
 async function main() {
@@ -16,7 +16,7 @@ async function main() {
 
   const newDevice = server.namespace.addObject({
     organizedBy: server.server.engine.addressSpace.rootFolder.objects,
-    browseName: "Device1",
+    browseName: "Device1"
   });
 
   const randomVar = server.namespace.addVariable({
@@ -36,7 +36,7 @@ async function main() {
 
   const clientDevice = server.namespace.addObject({
     organizedBy: server.server.engine.addressSpace.rootFolder.objects,
-    browseName: "ClientDevice",
+    browseName: "ClientDevice"
   });
 
   // We'll modify this variable with our local opc client.
@@ -44,7 +44,7 @@ async function main() {
     componentOf: clientDevice,
     browseName: "ClientVar",
     dataType: "Double",
-    accessLevel: makeAccessLevelExFlag("CurrentRead | CurrentWrite"),
+    accessLevel: makeAccessLevelExFlag("CurrentRead | CurrentWrite")
   });
   clientVar.setValueFromSource({ dataType: DataType.Double, value: 1.1 });
 
@@ -53,7 +53,7 @@ async function main() {
     componentOf: clientDevice,
     browseName: "ConstantVar",
     dataType: "Double",
-    accessLevel: makeAccessLevelExFlag("CurrentRead"),
+    accessLevel: makeAccessLevelExFlag("CurrentRead")
   });
   constantVar.setValueFromSource({ dataType: DataType.Double, value: 10.0 });
 

@@ -5,7 +5,7 @@ import {
     MessageSecurityMode,
     SecurityPolicy,
     Namespace,
-    UAObject,
+    UAObject
 } from "node-opcua";
 
 import envPaths from "env-paths";
@@ -31,13 +31,13 @@ class OpcServer {
         return new Promise<void>(async (resolve) => {
             this.server = new OPCUAServer({
                 serverCertificateManager: new OPCUACertificateManager({
-                    rootFolder: pkiFolder,
+                    rootFolder: pkiFolder
                 }),
                 port: this.port, // the port of the listening socket of the server
                 resourcePath: "/UA/SmartFactory",
                 allowAnonymous: true,
                 securityModes: [MessageSecurityMode.None],
-                securityPolicies: [SecurityPolicy.None],
+                securityPolicies: [SecurityPolicy.None]
             });
             await this.server.initialize();
 
