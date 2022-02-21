@@ -12,10 +12,11 @@ And Node.js is an open source server environment.
 ### Getting Started to create an OPC-UA Server (with simulated data)
 
 1. Download and install Node.js [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
-2. Download the Source Code, and run the package. You might need to close VS Code one or twice. Check by running a command prompt special NodeJS, and type 
+2. *Note : VS code needs a restart to take into account the node install* 
+3. Download the Source Code, and run the package. You might need to close VS Code one or twice. Check by running a command prompt special NodeJS, and type 
    ``` node -v ```  and also ``` npm ```
-3. If node is installed ok, in a Command Prompt, go to the folder location where resides the file package.json
-4. then run the 2 commands
+4. If node is installed ok, in a Command Prompt, go to the folder location where resides the file package.json
+5. then run the 2 commands (takes about 5 to 10 minutes to get all the packages)
 
 ```
 npm install // better : npm ci so that we stay at the same version of dependences
