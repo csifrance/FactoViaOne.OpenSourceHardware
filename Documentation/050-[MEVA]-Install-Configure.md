@@ -18,6 +18,7 @@ Many IoT Edge computing could do the job :
     * CPU : Intel(R) Core(TM) i7-9700TE CPU @ 1.80GHz 8 cores
        * specifications : https://openbenchmarking.org/s/Intel%20Core%20i7-9700TE
     * HDD : 3 x 2TB Samsung SSD 860 PRO 
+    * RAM : 64 GB (2x32 GB)
 
 **Installing the OS**
 - Prepare a bootable USB
