@@ -5,9 +5,9 @@ For example :
 https://www.advantech.com/products/1-2jkbyz/ark-1124u/mod_e4faa6eb-0cd1-4c55-b2d9-0dea6c8cbdff
 
 In the case below, if you are an advanced user, we are detailing the assembly for your own specification (else you could buy it off the shelf with everything already mounted).
-
-* ensure you are wired to Ground of the ARK-1124
-you have many versions of bracelets, for example an traditional green one, 
+A grounded anti-static mat and a wrist strap are recommended for your work area
+* ensure you are wired to Ground of the ARK-1124 with wrist strap
+you have many versions of bracelets / wrist strap, for example an traditional green one, 
 
 ![image.png](./Resource-Images/010-Anti-static-bracelet.png)
 
