@@ -4,7 +4,7 @@
 
 ## FR: A propos des licences 
 
-Sauf mention contraire, le repositoty a été Open Sourcé au CSI France (Collectif startups industrielles France). L'attribution et l'idée d'origine est Vincent Thavonekham. En voici les termes et conditions :
+Sauf mention contraire, le repositoty a été Open Sourcé au CSI France (Collectif startups industrielles France). L'idée d'origine du projet et l'initiative est attribuée à Vincent Thavonekham. En voici les termes et conditions :
 * sur la partie matérielle : [copyright et licence selon la license "Open Source Hardware (OSHW) Définition 1.0"](./LICENSE). 
 * sur la partie logicielle : [copyright et licence selon la license "Creative Commons Attribution-ShareAlike 2.0 Generic License" (CC BY-SA 2.0)](./LICENSE-CODE).
 
