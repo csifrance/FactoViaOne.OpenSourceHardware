@@ -1,4 +1,4 @@
-**Installation of the Open Source Operating System : Linux Ubuntu 18.04 LTS ou 20.04 LTS (Hirsute Hippo)**
+**Installation of the Open Source Operating System : Linux Ubuntu 18.04 LTS ou 20.04 LTS (Focal Fossa)**
 
 Many IoT Edge computing could do the job : 
 * HPE EL300 that is a monster !
