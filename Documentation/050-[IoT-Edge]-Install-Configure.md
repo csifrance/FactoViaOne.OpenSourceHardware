@@ -5,6 +5,12 @@ Many IoT Edge computing could do the job :
 * HPE EL300 that is a monster !
 * Arestech (another massive monster! as detailed below)
   * MEVA 3110 : https://www.arestech.com.tw/machine-vision-computer-meva-3110.html
+    * Factory Automation
+    * Vision
+    * Inspection
+    * Control
+    * Surveillance
+ 
   * Supports 8th/9th Gen Intel® LGA 1151 Processors
     Triple Display Supported by VGA, DVI and Display Port
     2 x DDR4 2400 / 2666MHz SO-DIMM, Max up to 64GB
