@@ -54,10 +54,10 @@ you have many versions of bracelets / wrist strap, for example an traditional gr
 * unscrew the 4 screws
 /!\ DANGER 1 : Ensure your arm is still being wired to the Ground of the ARK-1124
 **/!\ DANGER 2 : When removing the heater by unscrewing the 4 screws, YOU NEED TO BE REALLY CAREFULL about the CPU and the surrounding electronical componants where special heating paste and foam are present. DON'T TOUCH THEM, DONT'T REMOVE THEM. Else the fanless system will fail, and your ARK-1124 will overheat and be damaged !***
-(1) small heat transmitter foam on the left of the CPU
-(2) large heat transmitter foam that will go on the top of the RAM, once inserted
-(3) medium heat transmitter foam on the right of the CPU. I removed carefully to take a picture of the electrical components circled in orange to show you what it underneath
-(4) blue heat transmitter paste that conducts the heat of the CPU to the heater plate
+(1) small black square foam insulation on the left of the CPU
+(2) larger black rectangle foam insulation that will go on the top of the RAM, once inserted (see operations after)
+(3) medium black square foam insulation on the right of the CPU. I removed carefully to take a picture of the electrical components circled in orange to show you what it underneath
+(4) blue heat transmitter paste that conducts the heat from the CPU to the large heater plate
 
 ![image.png](./Resource-Images/120-Unscrew_Plate_for_RAM.png)
 
@@ -74,7 +74,7 @@ you have many versions of bracelets / wrist strap, for example an traditional gr
   
 ![image.jpg](./Resource-Images/150-InsertAngledRAM.jpg)
 
-* push the RAM into horizontal position to suppress the initial angle. Ensure the left and right metallic blocking systems are in place in the semi-circle cut of the RAM
+* push the RAM into horizontal position to suppress the initial angle. Ensure the left and right semi-metallic circle blocking systems are in place in the semi-circle cut of Circuit board of the RAM (Note : the semi-metalic circle are not exactly aligned with the slot)
   
 ![image.jpg](./Resource-Images/160-PutRAMhorizontaltoremoveAngle.jpg)
 
@@ -85,7 +85,8 @@ you have many versions of bracelets / wrist strap, for example an traditional gr
 * close and screw back
 
 * **SANITY CHECK :** 
-* plug the electricity, and turn on => Green light
+* plug the electricity => Orange light
+* Turn on (press the Orange light) => Green light + Beep (x4)
   
 ![image.jpg](./Resource-Images/180-SanityCheck-PutPowerOn.jpg)
 
